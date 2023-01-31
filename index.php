@@ -17,17 +17,17 @@
 <body>
     <div class="container">
         <div class="segundo-contenedor">
-        <h1 class="titulo">FORMULARIO DE DATOS</h1>
+        <!-- <h1 class="titulo">FORMULARIO DE DATOS</h1> -->
             <div class="input-datos">
                 <label for="nombre">NOMBRES DEL ALUMNO</label>
-                <input type="text" id="nombres" name="nombres">
+                <input type="text" id="nombres" name="nombres" placeholder="INGRESE SUS NOMBRES">
             </div>
             <div class="input-datos">
                 <label for="apellido">APELLIDO PATERNO Y MATERNO</label>
-                <input type="text" id="apellidos" name="apellidos">
+                <input type="text" id="apellidos" name="apellidos" placeholder="INGRESE SUS APELLIDOS">
             </div>     
             <div class="input-datos div-dni">
-                <label for="dni">NRO. DNI:</label>
+                <label for="dni">NRO. DNI</label>
                 <select name="tipodocumento" id="tipodocumento">
                     <?php
                         $sql = "SELECT id, documento FROM tipodocumento";
@@ -37,7 +37,7 @@
                         <option value="<?php echo $lista["id"]?>"><?php echo $lista["documento"]?></option>
                     <?php }?>
                 </select>
-                <input type="text" id="documento" name="documento">
+                <input type="text" id="documento" name="documento" placeholder="NUMERO DE DNI">
             </div>
             <div class="input-datos div-telefono">
                 <label for="dni" class="label-telefono">N. TELEFONO</label>
@@ -50,14 +50,14 @@
                         <option value="<?php echo $lista["id"]?>"><?php echo $lista["codigociudad"]?></option>
                     <?php }?>
                 </select>
-                <input type="number" id="telefono" name="telefono">
+                <input type="number" id="telefono" name="telefono" placeholder="NUMERO DE TELEFONO">
             </div>            
             <div class="input-datos">
-                <label for="email">E-MAIL:</label>
-                <input type="email" id="email" name="email">
+                <label for="email">INGRESE SU E-MAIL</label>
+                <input type="email" id="email" name="email" placeholder="INGRESE SU E-MAIL">
             </div>        
             <div class="input-datos datos-carrera">
-                <label for="carrera">CARRERA QUE DESEA CONSULTAR:</label>
+                <label for="carrera">CARRERA QUE DESEA CONSULTAR</label>
                 <select name="idcarrera" id="idcarrera">
                     <option>SELECCIONE UNA CARRERA ...</option>
                 <?php
