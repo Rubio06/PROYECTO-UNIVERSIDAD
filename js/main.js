@@ -1,4 +1,7 @@
 
+let botonEnviar = document.getElementById("btn-enviar");
+let terminos = document.getElementById("terminos");
+
 $(document).ready(function () {
     $("button").click(function () {
         var nombres = $('#nombres').val();
@@ -35,21 +38,33 @@ $(document).ready(function () {
             document.getElementById("documento").value = "";
             document.getElementById("telefono").value = "";
             document.getElementById("email").value = "";
-            document.getElementById("terminos").value = "";
+            terminos = document.getElementById("terminos").checked = false;
             document.getElementById("comentarios").value = "";
+            
         });
     });
 });
 
-let botonEnviar = document.getElementById("btn-enviar");
-let terminos = document.getElementById("terminos");
-
 terminos.addEventListener("click", ()=>{
-    if (terminos.checked) {
+    if (terminos.checked == true) {
+        //true: pintado color azul
         botonEnviar.style.background = "rgb(0, 0, 90)";
-        botonEnviar.style.disabled = false;
+        botonEnviar.disabled = false;
     } else {
+        //false: pintado color azul con zombra
         botonEnviar.style.background = "rgba(0, 0, 90, 0.589)";
-        botonEnviar.style.disabled = true;
+        botonEnviar.disabled = true;
     }
 });
+botonEnviar.addEventListener("click", ()=>{
+    if (botonEnviar) {
+        //false: pintado color azul con zombra
+        botonEnviar.style.background = "rgba(0, 0, 90, 0.589)";
+        // botonEnviar.disabled = false;
+    } else {
+        //true: pintado color azul
+        botonEnviar.style.background = "rgb(0, 0, 90)";
+        // botonEnviar.disabled = true;
+    }
+});
+

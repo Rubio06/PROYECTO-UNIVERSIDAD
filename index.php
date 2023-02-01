@@ -75,10 +75,10 @@
             </div>
             <div class="input-datos">
                 <label for="">Comentarios</label>
-                <textarea name="comentarios" id="comentarios" cols="10" rows="4" style="resize:none;"></textarea>
+                <textarea name="comentarios" id="comentarios" cols="10" rows="4" style="resize:none; padding: 6px; font-family: Roboto"></textarea>
             </div>
             <div class="input-datos boton">
-                <button id="btn-enviar">Enviar datos</button>
+                <button id="btn-enviar" class="clase-boton">Enviar datos</button>
             </div>
         </div>
     </div>
